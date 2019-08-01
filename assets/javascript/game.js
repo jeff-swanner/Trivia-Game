@@ -190,9 +190,10 @@ $(document).ready(function() {
             newDiv.append("<p>Unanswered: "+unanswered+"</p>");
             newDiv.append("<button id='startButton'>Start Over?")
             $("#game").append(newDiv);
-            promenadeMusic.pause();
-            jawsMusic.currentTime = 0;
-            jawsMusic.play();
+            promenadeMusic.currentTime = 0;
+            promenadeMusic.play();
+            jawsMusic.pause();
+            
         };
     };
 
@@ -202,9 +203,9 @@ $(document).ready(function() {
         incorrectAnswers = 0;
         unanswered = 0;
         nextQuestion();
-        promenadeMusic.currentTime = 0;
-        promenadeMusic.play();
-        jawsMusic.pause();
+        promenadeMusic.pause();
+        jawsMusic.currentTime = 0;
+        jawsMusic.play();
     });
     $(document).on('click', '.answer', function () {
         selectedAnswer = this;
